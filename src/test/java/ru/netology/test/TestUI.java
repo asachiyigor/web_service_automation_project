@@ -341,7 +341,7 @@ public class TestUI {
             val cvc = Data.getValidCVC();
             fillfull.fillOutFields(cardNumber, month, year, owner, cvc);
             fillfull.expectApprovalFromBank();
-            val expected = "null";
+            val expected = String.valueOf(null);
             val actual = DbInteraction.getStatusBuyDebit();
             assertEquals(expected, actual);
         }
@@ -357,7 +357,7 @@ public class TestUI {
             val cvc = Data.getValidCVC();
             fillfull.fillOutFields(cardNumber, month, year, owner, cvc);
             fillfull.expectApprovalFromBank();
-            val expected = "null";
+            val expected = String.valueOf(null);
             val actual = DbInteraction.getStatusBuyDebit();
             assertEquals(expected, actual);
         }
@@ -408,7 +408,7 @@ public class TestUI {
             val cvc = Data.getValidCVC();
             fillfull.fillOutFields(cardNumber, month, year, owner, cvc);
             fillfull.expectApprovalFromBank();
-            val expected = "null";
+            val expected = String.valueOf(null);
             val actual = DbInteraction.getStatusBuyDebit();
             assertEquals(expected, actual);
         }
@@ -424,7 +424,7 @@ public class TestUI {
             val cvc = Data.getValidCVC();
             fillfull.fillOutFields(cardNumber, month, year, owner, cvc);
             fillfull.expectApprovalFromBank();
-            val expected = "null";
+            val expected = String.valueOf(null);
             val actual = DbInteraction.getStatusBuyCredit();
             assertEquals(expected, actual);
         }

@@ -5,4 +5,14 @@
 3. Запустить авто тесты командой `./gradlew clean test`.
 4. Для создания отчета Allure запустить команду `./gradlew allureServe`.
 
-[![Build status](https://ci.appveyor.com/api/projects/status/vo67j68g0v118qr3/branch/master?svg=true)](https://ci.appveyor.com/project/asachiyigor/web-service-automation-project/branch/master)
+
+
+### Переключение СУБД 
+1. # **MySQL**
+https://github.com/asachiyigor/web_service_automation_project/blob/6564cea0e9cdbcf6e29891d9061545ae4d819e1b/application.properties#L9
+
+3. # **PostgreSQL**
+https://github.com/asachiyigor/web_service_automation_project/blob/6564cea0e9cdbcf6e29891d9061545ae4d819e1b/application.properties#L4
+
+
+[![Build status](https://ci.appveyor.com/api/projects/status/odwdkb10xs2ghr9u/branch/master?svg=true)](https://ci.appveyor.com/project/asachiyigor/web-service-automation-project/branch/master)
