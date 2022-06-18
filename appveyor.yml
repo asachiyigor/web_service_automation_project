@@ -19,7 +19,7 @@ install:
   - sleep 15
   - docker ps
   - sleep 15
-  - java -jar artifacts/aqa-shop.jar &
+  - java -jar artifacts/aqa-shop.jar
   - chmod +x gradlew
 
 build_script:
