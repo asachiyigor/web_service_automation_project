@@ -332,7 +332,7 @@ public class TestUI {
     class RandomOwnerName {
         @Test
         @DisplayName("ByDebitRuNameDbRequest")
-        void shouldShowNullWhenDebitCardBuyFromRandomRuName() {
+        void shouldDeclineWhenDebitCardBuyFromRandomRuName() {
             buttons.buyDebitCard();
             val cardNumber = Data.getValidCardNumber();
             val month = Data.getValidMonth();
@@ -341,14 +341,14 @@ public class TestUI {
             val cvc = Data.getValidCVC();
             fillfull.fillOutFields(cardNumber, month, year, owner, cvc);
             fillfull.expectApprovalFromBank();
-            val expected = String.valueOf(null);
+            val expected = "DECLINED";
             val actual = DbInteraction.getStatusBuyDebit();
             assertEquals(expected, actual);
         }
 
         @Test
         @DisplayName("ByCreditRuNameDbRequest")
-        void shouldShowNullWhenCreditCardBuyFromRandomRuName() {
+        void shouldDeclineWhenCreditCardBuyFromRandomRuName() {
             buttons.buyCreditCard();
             val cardNumber = Data.getValidCardNumber();
             val month = Data.getValidMonth();
@@ -357,7 +357,7 @@ public class TestUI {
             val cvc = Data.getValidCVC();
             fillfull.fillOutFields(cardNumber, month, year, owner, cvc);
             fillfull.expectApprovalFromBank();
-            val expected = String.valueOf(null);
+            val expected = "DECLINED";
             val actual = DbInteraction.getStatusBuyDebit();
             assertEquals(expected, actual);
         }
@@ -399,7 +399,7 @@ public class TestUI {
     class RandomCardNumber {
         @Test
         @DisplayName("ByDebitDbRequest")
-        void shouldShowNullWhenDebitCardBuyFromRandomCardNumber() {
+        void shouldDeclineWhenDebitCardBuyFromRandomCardNumber() {
             buttons.buyDebitCard();
             val cardNumber = Data.getRandomCardNumber();
             val month = Data.getValidMonth();
@@ -408,14 +408,14 @@ public class TestUI {
             val cvc = Data.getValidCVC();
             fillfull.fillOutFields(cardNumber, month, year, owner, cvc);
             fillfull.expectApprovalFromBank();
-            val expected = String.valueOf(null);
+            val expected = "DECLINED";
             val actual = DbInteraction.getStatusBuyDebit();
             assertEquals(expected, actual);
         }
 
         @Test
         @DisplayName("ByCreditDbRequest")
-        void shouldShowNullWhenCreditCardBuyFromRandomCardNumber() {
+        void shouldDeclineWhenCreditCardBuyFromRandomCardNumber() {
             buttons.buyCreditCard();
             val cardNumber = Data.getRandomCardNumber();
             val month = Data.getValidMonth();
@@ -424,7 +424,7 @@ public class TestUI {
             val cvc = Data.getValidCVC();
             fillfull.fillOutFields(cardNumber, month, year, owner, cvc);
             fillfull.expectApprovalFromBank();
-            val expected = String.valueOf(null);
+            val expected = "DECLINED";
             val actual = DbInteraction.getStatusBuyCredit();
             assertEquals(expected, actual);
         }
@@ -443,7 +443,7 @@ public class TestUI {
             val cvc = Data.getCVCEqualsNulls();
             fillfull.fillOutFields(cardNumber, month, year, owner, cvc);
             fillfull.expectRejectionFromBank();
-            val expected = Data.getValidCardStatus();
+            val expected = "DECLINED";
             val actual = DbInteraction.getStatusBuyDebit();
             assertEquals(expected, actual);
         }
@@ -459,7 +459,7 @@ public class TestUI {
             val cvc = Data.getCVCEqualsNulls();
             fillfull.fillOutFields(cardNumber, month, year, owner, cvc);
             fillfull.expectRejectionFromBank();
-            val expected = Data.getValidCardStatus();
+            val expected = "DECLINED";
             val actual = DbInteraction.getStatusBuyCredit();
             assertEquals(expected, actual);
         }
