@@ -25,7 +25,7 @@
 3. Уделить внимание корректному отображению ошибок при вводе не валидных значений.
 4. Составить подробную и однозначную документацию к приложению.
 
-![](../../../../ShareX/Screenshots/2022-06/firefox_2ZNniMUQDI.png)
+![firefox_2ZNniMUQDI](https://user-images.githubusercontent.com/42832806/174446052-ce438ec2-d984-4b8e-9629-bcdbd4f67dc0.png)
 
-С подробной информацией о результатах прогона можно ознакомиться [здесь (Build Scan)](://gradle.com/s/wo5enymgudqeo
-)
+
+С подробной информацией о результатах прогона можно ознакомиться [здесь (Build Scan](https://scans.gradle.com/s/wo5enymgudqeo))
