@@ -9,13 +9,16 @@ import java.sql.DriverManager;
 
 public class DbInteraction {
 
+    private static String url = System.getProperty("url");
+    private static String user = System.getProperty("username");
+    private static String password = System.getProperty("password");
+
     public DbInteraction() {
     }
 
     @SneakyThrows
     private static Connection getConnection() {
-        return DriverManager.getConnection("jdbc:mysql://localhost:3306/app", "admin", "pass"); // MySQL
-//        return DriverManager.getConnection("jdbc:postgresql://localhost:5432/app", "app", "pass"); // Postgres
+        return DriverManager.getConnection(url, user, password);
     }
 
     @SneakyThrows
