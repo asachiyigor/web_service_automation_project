@@ -10,7 +10,7 @@ import java.sql.DriverManager;
 public class DbInteraction {
 
     private static String url = System.getProperty("url");
-    private static String user = System.getProperty("username");
+    private static String user = System.getProperty("user");
     private static String password = System.getProperty("password");
 
     public DbInteraction() {
